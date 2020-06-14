@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" 
+	"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+	<!-- Customer Base Definition -->
+	<definition name="base.layout"
+		template="/WEB-INF/views/tiles/layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header"
+			value="/WEB-INF/views/tiles/header.jsp" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/tiles/menu.jsp" />
+		<put-attribute name="content" value="" />
+		<put-attribute name="footer"
+			value="/WEB-INF/views/tiles/footer.jsp" />
+	</definition>
+
+	<!-- Welcome Definition -->
+	<definition name="home" extends="base.layout">
+		<put-attribute name="title" value="Welcom to E-Mart" />
+		<put-attribute name="content"
+			value="/WEB-INF/views/home.jsp" />
+	</definition>
+	
+	<!-- customer form Definition -->
+	<definition name="customerForm" extends="base.layout">
+		<put-attribute name="title"
+			value="Customer Registration Form" />
+		<put-attribute name="content"
+			value="/WEB-INF/views/customer/customerForm.jsp" />
+	</definition>
+	
+	<!-- product form Definition -->
+	<definition name="productForm" extends="base.layout">
+		<put-attribute name="title"
+			value="Add New Product Form" />
+		<put-attribute name="content"
+			value="/WEB-INF/views/product/productForm.jsp" />
+	</definition>
+	
+</tiles-definitions>  
