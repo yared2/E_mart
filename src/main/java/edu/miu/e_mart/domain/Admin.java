@@ -11,20 +11,20 @@ public class Admin {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int adminId;
-	
+
 	private String firstName;
 	private  String lastName;
 	private ARole role;
 	private  ACredential credential;
 	private Address address;
-	
+
 	public Admin() {
 		super();
 	}
 
 	public Admin( String firstName, String lastName, ARole role, ACredential credential, Address address) {
 		super();
-		
+
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.role = role;
@@ -79,7 +79,7 @@ public class Admin {
 	public void setAddress(Address address) {
 		this.address = address;
 	}
-	
-	
+
+
 
 }
