@@ -10,35 +10,34 @@
       <label for="lastName">Last Name</label>
       <input type="text" class="form-control" id="lastName">
     </div>
+    <div class="form-group col-md-6">
+      <label for="payment">payment</label>
+      <input type="text" class="form-control" id="payment">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="credential">payment</label>
+      <input type="text" class="form-control" id="credential">
+    </div>
+        <div class="form-group col-md-6">
+      <label for="role">payment</label>
+      <input type="text" class="form-control" id="role">
+    </div>
   </div>
+  <h3>Address </h3>
   <div class="form-group">
-    <label for="address">Address</label>
-    <input type="text" class="form-control" id="address" placeholder="1234 Main St">
+    <label for="address.street">Street</label>
+    <input type="text" class="form-control" id="payment" placeholder="1234 Main St">
   </div>
   <div class="form-row">
     <div class="form-group col-md-6">
-      <label for="city">City</label>
+      <label for="address.city">City</label>
       <input type="text" class="form-control" id="city">
     </div>
-    <div class="form-group col-md-4">
-      <label for="state">State</label>
-      <select id="state" class="form-control">
-        <option selected>Choose...</option>
-        <option>...</option>
-      </select>
-    </div>
     <div class="form-group col-md-2">
-      <label for="zip">Zip Code</label>
+      <label for="address.zipCode">Zip Code</label>
       <input type="text" class="form-control" id="zip">
     </div>
   </div>
-  <div class="form-group">
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="gridCheck">
-      <label class="form-check-label" for="gridCheck">
-        Check me out
-      </label>
-    </div>
-  </div>
+
   <button type="submit" class="btn btn-primary">Register</button>
 </form>

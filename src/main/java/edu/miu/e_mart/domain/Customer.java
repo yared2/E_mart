@@ -10,16 +10,13 @@ public class Customer {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long customerId;
-	
 	private  String firstName;
 	private String lastName;
 	private  Payment payment;
 	private  ACredential credential;
 	private ARole  role;
 	private Address address;
-	
-	
-	
+
 	public Customer(){
 		
 	}
@@ -44,13 +41,9 @@ public class Customer {
 		return customerId;
 	}
 
-
-
 	public void setCustomerId(Long customerId) {
 		this.customerId = customerId;
 	}
-
-
 
 	public String getFirstName() {
 		return firstName;
@@ -68,13 +61,9 @@ public class Customer {
 		return lastName;
 	}
 
-
-
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-
-
 
 	public Payment getPayment() {
 		return payment;
