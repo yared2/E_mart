@@ -2,4 +2,8 @@
 target
 target/
 src/main/resources/database.properties
-
+.idea
+.classpath
+*.iws
+*.iml
+*.ipr
