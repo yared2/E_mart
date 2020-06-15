@@ -10,18 +10,18 @@ public class Customer {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long customerId;
-	
+
 	private  String firstName;
 	private String lastName;
 	private  Payment payment;
 	private  ACredential credential;
 	private ARole  role;
 	private Address address;
-	
-	
-	
+
+
+
 	public Customer(){
-		
+
 	}
 
 
@@ -29,7 +29,7 @@ public class Customer {
 	public Customer( String firstName, String lastName, Payment payment, ACredential credential,
 			ARole role, Address address) {
 		super();
-		
+
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.payment = payment;
@@ -121,6 +121,6 @@ public class Customer {
 	public void setAddress(Address address) {
 		this.address = address;
 	}
-	
+
 
 }

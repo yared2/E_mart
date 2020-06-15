@@ -37,5 +37,28 @@
 		<put-attribute name="content"
 			value="/WEB-INF/views/product/productForm.jsp" />
 	</definition>
-	
+
+	<!-- Payment form Definition -->
+	<definition name="payment" extends="base.layout">
+		<put-attribute name="title"
+					   value="Payment Information" />
+		<put-attribute name="content"
+					   value="/WEB-INF/views/customer/payment.jsp" />
+		<put-attribute name="menu"
+					   value="" />
+	</definition>
+
+
+
+	<!-- Review Definition -->
+	<definition name="review" extends="base.layout">
+		<put-attribute name="title"
+					   value="Review" />
+		<put-attribute name="content"
+					   value="/WEB-INF/views/customer/review.jsp" />
+		<put-attribute name="menu"
+					   value="" />
+	</definition>
+
+
 </tiles-definitions>  
