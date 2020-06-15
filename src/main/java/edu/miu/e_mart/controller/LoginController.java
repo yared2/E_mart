@@ -1,6 +1,6 @@
 package edu.miu.e_mart.controller;
 
-import org.springframework.stereotype.Controller;
+/*import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -21,6 +21,7 @@ public class LoginController {
 		return "products";
 	}
 
+<<<<<<< HEAD
 //import edu.miu.e_mart.domain.Credential;
 
 //@Controller
@@ -37,3 +38,6 @@ public class LoginController {
 
 
 }
+=======
+}*/
+
