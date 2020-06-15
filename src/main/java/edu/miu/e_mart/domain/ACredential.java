@@ -17,7 +17,7 @@ public class ACredential {
 	}
 	public ACredential( String userName, String passWord) {
 		super();
-		this.credentialId = credentialId;
+	
 		this.userName = userName;
 		this.passWord = passWord;
 	}

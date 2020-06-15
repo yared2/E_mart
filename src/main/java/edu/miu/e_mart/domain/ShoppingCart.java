@@ -8,7 +8,7 @@ import java.util.List;
 @Entity
 public class ShoppingCart {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer cartId;
     @OneToOne
     private Customer customer;

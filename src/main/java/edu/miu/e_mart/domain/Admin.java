@@ -12,10 +12,10 @@ public class Admin {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int adminId;
 
-	private String firstName;
-	private  String lastName;
-	private ARole role;
-	private  ACredential credential;
+//	private String firstName;
+//	private  String lastName;
+//	private ARole role;
+//	private  ACredential credential;
 //	private Address address;
 //
 //	public Admin() {
