@@ -1,5 +1,5 @@
 package edu.miu.e_mart.domain;
-/*
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -11,11 +11,11 @@ public class Admin {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int adminId;
-//
-//	private String firstName;
-//	private  String lastName;
-//	private ARole role;
-//	private  ACredential credential;
+
+	private String firstName;
+	private  String lastName;
+	private ARole role;
+	private  ACredential credential;
 //	private Address address;
 //
 //	public Admin() {
@@ -79,7 +79,7 @@ public class Admin {
 //	public void setAddress(Address address) {
 //		this.address = address;
 //	}
-//
 
 
-}*/
+
+}

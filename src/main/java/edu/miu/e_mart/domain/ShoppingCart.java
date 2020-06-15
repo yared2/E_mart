@@ -12,8 +12,8 @@ public class ShoppingCart {
     private Integer cartId;
     @OneToOne
     private Customer customer;
-    @OneToMany
-    private List<CartItem> listOfItems= new ArrayList<>();
+//    @OneToMany
+//    private List<CartItem> listOfItems= new ArrayList<>();
 
     public Customer getCustomer() {
         return customer;
@@ -28,13 +28,13 @@ public class ShoppingCart {
         this.customer = customer;
     }
 
-    public List<CartItem> getListOfItems() {
-        return listOfItems;
-    }
-
-    public void setItem(CartItem item) {
-        this.listOfItems.add(item);
-    }
+//    public List<CartItem> getListOfItems() {
+//        return listOfItems;
+//    }
+//
+//    public void setItem(CartItem item) {
+//        this.listOfItems.add(item);
+//    }
 
     public Integer getCartId() {
         return cartId;
