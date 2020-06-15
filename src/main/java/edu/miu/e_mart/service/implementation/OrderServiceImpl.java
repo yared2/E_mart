@@ -1,7 +1,7 @@
 package edu.miu.e_mart.service.implementation;
 
 
-import edu.miu.e_mart.domain.Order;
+import edu.miu.e_mart.domain.AnOrder;
 import edu.miu.e_mart.service.definition.IOrderService;
 import org.springframework.stereotype.Service;
 
@@ -10,17 +10,17 @@ import java.util.List;
 @Service
 public class OrderServiceImpl implements IOrderService {
     @Override
-    public Order saveOrder(Order order) {
+    public AnOrder saveOrder(AnOrder anOrder) {
         return null;
     }
 
     @Override
-    public Order findOrderById(Integer id) {
+    public AnOrder findOrderById(Integer id) {
         return null;
     }
 
     @Override
-    public List<Order> findAllOrder() {
+    public List<AnOrder> findAllOrder() {
         return null;
     }
 

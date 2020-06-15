@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.time.LocalDate;
 
 @Entity
-public class Order {
+public class AnOrder {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer orderId;
@@ -22,7 +22,7 @@ public class Order {
     /**
      * no-args constructor
      */
-    public Order() {
+    public AnOrder() {
 
     }
 
