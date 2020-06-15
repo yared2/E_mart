@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/e-mart.iml" filepath="$PROJECT_DIR$/e-mart.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/ShoppingCartForked.iml" filepath="$PROJECT_DIR$/.idea/ShoppingCartForked.iml" />
     </modules>
   </component>
 </project>
