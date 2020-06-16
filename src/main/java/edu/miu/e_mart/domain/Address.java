@@ -53,13 +53,9 @@ public class Address {
 		this.city = city;
 	}
 
-	public Integer getZipcode() {
-		return zipcode;
-	}
 
-	public void setZipcode(Integer zipcode) {
-		this.zipcode = zipcode;
-	}
+
+
 
 	public String getState() {
 		return state;
@@ -67,6 +63,14 @@ public class Address {
 
 	public void setState(String state) {
 		this.state = state;
+	}
+
+	public Integer getZipcode() {
+		return zipcode;
+	}
+
+	public void setZipcode(Integer zipcode) {
+		this.zipcode = zipcode;
 	}
 
 }

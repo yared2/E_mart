@@ -12,7 +12,7 @@ public class ARole {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer roleId;
 	// @NotNull(message = "{ }")
-	private String roleType;
+	private String roleType ;
 
 	public ARole() {
 	}

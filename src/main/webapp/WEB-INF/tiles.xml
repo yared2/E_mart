@@ -37,6 +37,16 @@
 		<put-attribute name="content"
 			value="/WEB-INF/views/product/productForm.jsp" />
 	</definition>
+	
+		<!-- admin  form Definition -->
+	<definition name="admin" extends="base.layout">
+		<put-attribute name="title"
+			value=" Add Admin Form" />
+		<put-attribute name="content"
+			value="/WEB-INF/views/admin/admin.jsp" />
+	</definition>
+	
+	
 
 	<!-- Payment form Definition -->
 	<definition name="payment" extends="base.layout">
@@ -47,7 +57,21 @@
 		<put-attribute name="menu"
 					   value="" />
 	</definition>
-
+	
+	<!-- login page  -->
+	<definition name="login" >
+		
+		<put-attribute name=""
+					   value="/WEB-INF/views/login/login.jsp" />
+		
+	</definition>
+	
+		<definition name="products" >
+		
+		<put-attribute name=""
+					   value="/WEB-INF/views/product/products.jsp" />
+		
+	</definition>
 
 
 	<!-- Review Definition -->

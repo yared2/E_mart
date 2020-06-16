@@ -16,8 +16,8 @@ public class DeploymentDescriptor extends AbstractAnnotationConfigDispatcherServ
 	}
 	
 	protected Class<?>[] getRootConfigClasses() {
-	    return new Class[] {
-            PersistenceJPAConfig.class
+	    return new Class[] 
+	    		{PersistenceJPAConfig.class
 	};
 	}
 	

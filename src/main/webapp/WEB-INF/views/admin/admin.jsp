@@ -1,4 +1,4 @@
-<h2 style="text-align: center;">Admin Registration Form</h2>
+<h2 style="text-align: center;"> Admin Registration Form</h2>
 <hr>
 <form action="" method="POST">
   <div class="form-row">
@@ -12,31 +12,31 @@
     </div>
   </div>
   <div class="form-group">
-    <label for="role">Role</label>
-    <input type="text" class="form-control" id="role" placeholder="1234 Main St">
+    <label for="credential.userName">User Name</label>
+    <input type="text" class="form-control" id="role" placeholder="eg. Alex">
   </div>
   <div class="form-row">
     <div class="form-group col-md-6">
-      <label for="credential">credential</label>
+      <label for="credential.password">password</label>
       <input type="text" class="form-control" id="credential">
     </div>
     </div>
     <h3>Address</h3>
     <div class="form-group col-md-2">
-      <label for="address.street"></label>
-      <input type="text" class="form-control" id="address.street">
+      <label for="Street"></label>
+      <input type="text" class="form-control" id="address.street" placeholder="Street">
     </div>
      <div class="form-group col-md-2">
-      <label for="address.city"></label>
-      <input type="text" class="form-control" id="address.city">
+      <label for="City"></label>
+      <input type="text" class="form-control" id="address.city" placeholder="City">
     </div>
   <div class="form-group col-md-2">
-      <label for="address.state"></label>
-      <input type="text" class="form-control" id="address.state">
+      <label for="State"></label>
+      <input type="text" class="form-control" id="address.state" placeholder="State">
     </div>
  <div class="form-group col-md-2">
-      <label for="address.zipCode"></label>
-      <input type="text" class="form-control" id="address.zipCode">
+      <label for="ZipCode"></label>
+      <input type="text" class="form-control" id="address.zipCode" placeholder="ZipCode">
     </div>
  
   <button type="submit" class="btn btn-primary">Register</button>

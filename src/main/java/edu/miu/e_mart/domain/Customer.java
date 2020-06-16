@@ -1,12 +1,12 @@
 
 package edu.miu.e_mart.domain;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
-
 
 @Entity
 public class Customer {
@@ -19,36 +19,34 @@ public class Customer {
 	// @NotEmpty(message = "{validate.notEmpty}")
 	private String lastName;
 	// @Valid
-	@OneToOne
+	@OneToOne(cascade = CascadeType.ALL)
 	private Payment payment;
 	// @Valid
-	@OneToOne
+	@OneToOne(cascade = CascadeType.ALL)
 	private ACredential acredential;
 	// @Valid
-	@OneToOne
+	@OneToOne(cascade = CascadeType.ALL)
 	private ARole role;
 	// @Valid
-	@OneToOne
+	@OneToOne(cascade = CascadeType.ALL)
 	private Address address;
 
 	public Customer() {
 
 	}
 
-
-
-	public int getCustomerId() {
-		return customerId;
-	}
-	
 	public Customer(String firstName, String lastName, Payment payment, ACredential acredential, ARole role,
-Address address) {
+			Address address) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.payment = payment;
-		this.acredential = acredential;
+		this.acredential =acredential;
 		this.role = role;
 		this.address = address;
+	}
+
+	public int getCustomerId() {
+		return customerId;
 	}
 
 	public void setCustomerId(int customerId) {
@@ -79,13 +77,9 @@ Address address) {
 		this.payment = payment;
 	}
 
-	public ACredential getCredential() {
-		return acredential;
-	}
 
-	public void setCredential(ACredential acredential) {
-		this.acredential = acredential;
-	}
+
+
 
 	public ARole getRole() {
 		return role;
@@ -101,6 +95,14 @@ Address address) {
 
 	public void setAddress(Address address) {
 		this.address = address;
+	}
+
+	public ACredential getAcredential() {
+		return acredential;
+	}
+
+	public void setAcredential(ACredential acredential) {
+		this.acredential = acredential;
 	}
 
 }

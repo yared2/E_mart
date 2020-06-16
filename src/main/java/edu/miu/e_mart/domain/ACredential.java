@@ -14,26 +14,19 @@ public class ACredential {
 	// @NotNull(message = "{ }")
 	private String userName;
 	// @NotNull(message = "{ }")
-	private String passWord;
+	private String password;
 
 	public ACredential() {
 		super();
 	}
 
-	public ACredential(String userName, String passWord) {
+	public ACredential(String userName, String password) {
 		super();
 
 		this.userName = userName;
-		this.passWord = passWord;
+		this.password = password;
 	}
 
-	public int getCredentialId() {
-		return credentialId;
-	}
-
-	public void setCredentialId(int credentialId) {
-		this.credentialId = credentialId;
-	}
 
 	public String getUserName() {
 		return userName;
@@ -43,12 +36,12 @@ public class ACredential {
 		this.userName = userName;
 	}
 
-	public String getPassWord() {
-		return passWord;
+	public String getPassword() {
+		return password;
 	}
 
-	public void setPassWord(String passWord) {
-		this.passWord = passWord;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 }

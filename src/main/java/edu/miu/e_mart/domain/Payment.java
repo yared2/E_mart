@@ -4,7 +4,10 @@ package edu.miu.e_mart.domain;
 
 import javax.persistence.*;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.time.LocalDate;
+import java.util.Date;
 
 @Entity
 public class Payment {
@@ -13,18 +16,18 @@ public class Payment {
 	private Integer paymentId;
 
 	// @NotEmpty
-	private String cardType = "Visa/Mastercardd";
+	private String cardType ;
 
 	// @CreditCardNumber
 	// @Size(min=16,max=16, message = "Card should have 16 numbers!")
 	private String cartNumber;
 
 	// @NotEmpty
-	private String nameOnCard = "default name";
+	private String nameOnCard;
 
 	// @NotNull
-	// @DateTimeFormat(pattern = "mm/dd/yyyy")
-	private LocalDate cardExpireDate;
+	@DateTimeFormat(pattern = "mm/dd/yyyy")
+	private Date cardExpireDate;
 	// @NotEmpty(message = "{}")
 	private int ccv = 000;
 
@@ -57,10 +60,10 @@ public class Payment {
 	public Payment() {
 	}
 
-	public Payment(String cartNumber, String nameOnCard, LocalDate cardExpireDate) {
+	public Payment(String cartNumber, String nameOnCard, Date cardExpireDate) {
 		this.cartNumber = cartNumber;
 		this.nameOnCard = nameOnCard;
-		this.cardExpireDate = cardExpireDate;
+		this.setCardExpireDate(cardExpireDate);
 	}
 
 	public Integer getPaymentId() {
@@ -87,11 +90,13 @@ public class Payment {
 		this.nameOnCard = nameOnCard;
 	}
 
-	public LocalDate getCardExpireDate() {
+	public Date getCardExpireDate() {
 		return cardExpireDate;
 	}
 
-	public void setCardExpireDate(LocalDate expriryYear) {
-		this.cardExpireDate = expriryYear;
+	public void setCardExpireDate(Date cardExpireDate) {
+		this.cardExpireDate = cardExpireDate;
 	}
+
+
 }

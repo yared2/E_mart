@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -21,23 +22,23 @@
 </head>
 <body>
 	<div class="container">
-		<form action="login" method="post" >
+		<form:form action="login" method="post"  modelAttribute="credential">
 			<fieldset>
 				<legend>Log in</legend>
 				<div class="form-group">
-					<label for="username">Username</label> <input
-						type="text" class="form-control" id="username" placeholder="Enter Username"> <small
+					<label for="userName">Username</label> 
+					<form:input path="userName" type="text" class="form-control" id="userName" placeholder="Enter Username"/> 
+						<small
 						id="username" class="form-text text-muted">We'll never
 						share your email with anyone else.</small>
 				</div>
 				<div class="form-group">
-					<label for="password">Password</label> <input
-						type="password" class="form-control" id="password"
-						placeholder="Password">
+					<label for="password">Password</label> 
+					<form:input path="password" type="password" class="form-control" id="password" placeholder="Password"/>
 				</div>
 				<button type="submit" class="btn btn-primary">Login</button>
 			</fieldset>
-		</form>
+		</form:form>
 	</div>
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
 		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
