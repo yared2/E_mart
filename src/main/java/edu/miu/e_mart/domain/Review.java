@@ -9,7 +9,7 @@ import javax.persistence.*;
 public class Review {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer reviewId = 000;
+	private Integer reviewId;
 	// @NotEmpty(message = "Review needs content")
 	private String comment;
 

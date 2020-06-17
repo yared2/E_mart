@@ -1,14 +1,21 @@
 package edu.miu.e_mart.service.definition;
 
-import edu.miu.e_mart.domain.ARole;
-//import edu.miu.e_mart.domain.CartItem;
-
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
+import edu.miu.e_mart.domain.Product;
+import edu.miu.e_mart.domain.Review;
+
+@Service
 public interface IProductService {
-//    public CartItem saveCartItem(CartItem cartItem);
-//    public CartItem findCartItemById(Integer id);
-//    public List<CartItem> findAllCartItem();
-//    public void updateCartItemById(Integer id);
-//    public void deleteCartItemById(Integer id);
+	public Product saveProduct(Product product);
+	public List<Product> findAllProducts();
+	public Product findProductById(Integer productId);
+	public void deleteProductById(Integer productId);
+	
+	//public List<Product> findAllProductsByCategory(String category);
+	public String identifyUser(String user) throws Exception;
+	//public List<Review> findAllCommentsOfProduct(Integer productId);
+
 }

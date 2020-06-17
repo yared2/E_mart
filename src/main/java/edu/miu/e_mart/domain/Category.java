@@ -2,37 +2,37 @@ package edu.miu.e_mart.domain;
 
 import java.util.List;
 
-import javax.persistence.CascadeType;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
-
+import javax.validation.constraints.NotEmpty;
 
 @Entity
 public class Category {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long categoryId;
-
-	// @NotEmpty(message = "{validate.notEmpty}")
+	private Integer categoryId;
+	
+	@NotEmpty(message = "{validate.notEmpty}")
+	@Column(nullable=false, unique = true)
 	private String categoryName;
-
-	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "category")
+	
+	@OneToMany(mappedBy = "category")
 	private List<Product> products;
 
 	public Category() {
 
 	}
 
-	public Long getCategoryId() {
+	public Integer getCategoryId() {
 		return categoryId;
 	}
 
-	public void setCategoryId(Long categoryId) {
+	public void setCategoryId(Integer categoryId) {
 		this.categoryId = categoryId;
 	}
 
@@ -51,5 +51,11 @@ public class Category {
 	public void setProducts(List<Product> products) {
 		this.products = products;
 	}
+
+	@Override
+	public String toString() {
+		return  categoryName;
+	}
+	
 
 }

@@ -6,40 +6,35 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-
 import edu.miu.e_mart.domain.ACredential;
-import edu.miu.e_mart.service.implementation.ACredentialServiceImp;
-
-
+import edu.miu.e_mart.service.definition.IACredentialService;
 
 
 @Controller
 public class LoginController {
-	
 	@Autowired
-	private ACredentialServiceImp acredential;
-	
-	@RequestMapping(value= {"/login"}, method = RequestMethod.GET)
-	public String getLoginPage(@ModelAttribute("credential") ACredential credential) {
-		return "login/login";
+	private IACredentialService credentialService;
+
+	@RequestMapping(value = { "/login" }, method = RequestMethod.GET)
+	public String diplayLogin(@ModelAttribute("credential") ACredential credential) {
+		return "login";
 	}
 
-	@RequestMapping(value= {"/login"}, method = RequestMethod.POST)
+	@RequestMapping(value = { "/login" }, method = RequestMethod.POST)
 	public String login(@ModelAttribute("credential") ACredential credential) {
-		System.out.println(credential.getUserName());
-		System.out.println(credential.getPassword());
-		ACredential acredentiall =	acredential.getCredntialByUserName(credential.getUserName());
-		System.out.println(acredentiall.getPassword());
-		
-		if(acredentiall.getPassword()!=credential.getPassword()) {
-			return "login/login";
-		}
-		return "products";
+
+//		ACredential user_credential = credentialService.findACredentialByUsername(credential.getUsername());
+//		if (user_credential.role.roleName.equals("admin")) {
+//			
+//			return "redirect:/admin/products/list";
+//		}
+
+		return "redirect:/customer/products/list"; 
 	}
 
+	@RequestMapping(value = { "/logout" }, method = RequestMethod.GET)
+	public String logout(@ModelAttribute("credential") ACredential credential) {
+		return "login";
+	}
 
 }
-
-
-
-

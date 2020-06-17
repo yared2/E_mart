@@ -77,10 +77,6 @@ public class Customer {
 		this.payment = payment;
 	}
 
-
-
-
-
 	public ARole getRole() {
 		return role;
 	}

@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import edu.miu.e_mart.domain.ARole;
 import edu.miu.e_mart.domain.Customer;
 
 import edu.miu.e_mart.service.implementation.CustomerServiceImp;
@@ -22,12 +23,18 @@ public class CustomerController {
 	}
 	@RequestMapping(value = {"/addCustomer"}, method = RequestMethod.POST)
 	public String addCustomer(@ModelAttribute("newCustomer") Customer customer) {
+
+		
 		System.out.println("hiii");
-		System.out.println(customer.getFirstName());
-//		System.out.println(customer.getFirstName());
+		
+		
+
 	customerServiceImple.addCustomer(customer);
-		return "login";
+		return "redirect:/login";
 	}
 
-
+//	@RequestMapping(value="/customer_products" ,method = RequestMethod.GET)
+//public String anypage() {
+//	return "customer_products";
+//}
 }
