@@ -6,6 +6,7 @@ import org.springframework.data.repository.query.Param;
 import edu.miu.e_mart.domain.ACredential;
 
 public interface IACredentialService {
+	
 	public ACredential getCredntialByUserName(String name);
 	
 

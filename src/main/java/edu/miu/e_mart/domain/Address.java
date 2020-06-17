@@ -4,6 +4,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 
 @Entity
@@ -12,19 +16,19 @@ public class Address {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer addressId;
 
-	// @NotEmpty(message = "{validate.notEmpty}")
+ @NotEmpty(message = "{validate.notEmpty}")
 	private String street;
 
-	// @NotEmpty(message = "{validate.notEmpty}")
+ @NotEmpty(message = "{validate.notEmpty}")
 	private String city;
 
-	// @NotEmpty(message = "{validate.notEmpty}")
-	// @Size(min=2,max=2,message = "{validate.size}")
+ @NotEmpty(message = "{validate.notEmpty}")
+ @Size(min=2,max=2,message = "{validate.state.size}")
 	private String state;
 
-//	@NotNull(message = "{validate.notNull}")
-//	@Size(min=5,max=5,message = "{validate.size}")
-	private Integer zipcode;
+ 	//@Size(min=5,max=5,message = "{validate.size}")
+	@NotNull
+	private Integer zipCode;
 
 	public Address() {
 	}
@@ -65,12 +69,12 @@ public class Address {
 		this.state = state;
 	}
 
-	public Integer getZipcode() {
-		return zipcode;
+	public Integer getZipCode() {
+		return zipCode;
 	}
 
-	public void setZipcode(Integer zipcode) {
-		this.zipcode = zipcode;
+	public void setZipCode(Integer zipcode) {
+		this.zipCode = zipcode;
 	}
 
 }

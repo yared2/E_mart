@@ -10,6 +10,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
+import javax.validation.Valid;
+import javax.validation.constraints.NotEmpty;
 
 
 @Entity
@@ -17,17 +19,17 @@ public class Admin {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int adminId;
-	// @NotEmpty(message = "{validate.notEmpty}")
+	@NotEmpty(message = "{validate.notEmpty}")
 	private String firstName;
-	// @NotEmpty(message = "{validate.notEmpty}")
+	 @NotEmpty(message = "{validate.notEmpty}")
 	private String lastName;
-	// @Valid
-	@OneToOne
+	 @Valid
+	@OneToOne(cascade = CascadeType.ALL)
 	private ARole role;
-	// @Valid
-	@OneToOne
+	 @Valid
+	@OneToOne(cascade = CascadeType.ALL)
 	private ACredential acredential;
-	@OneToOne
+	@OneToOne(cascade = CascadeType.ALL)
 	private Address address;
 	
 	@OneToMany(cascade = CascadeType.ALL)
@@ -37,14 +39,16 @@ public class Admin {
 		super();
 	}
 
-	public Admin(String firstName, String lastName, ARole role, ACredential acredential, Address address) {
+	public Admin(int adminId, String firstName, String lastName, ARole role, ACredential acredential, Address address,
+			List<Product> products) {
 		super();
-
+		this.adminId = adminId;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.role = role;
 		this.acredential = acredential;
 		this.address = address;
+		this.products = products;
 	}
 
 	public int getAdminId() {
@@ -79,12 +83,12 @@ public class Admin {
 		this.role = role;
 	}
 
-	public ACredential getCredential() {
+	public ACredential getAcredential() {
 		return acredential;
 	}
 
-	public void setCredential(ACredential credential) {
-		this.acredential = credential;
+	public void setAcredential(ACredential acredential) {
+		this.acredential = acredential;
 	}
 
 	public Address getAddress() {
@@ -95,4 +99,13 @@ public class Admin {
 		this.address = address;
 	}
 
+	public List<Product> getProducts() {
+		return products;
+	}
+
+	public void setProducts(List<Product> products) {
+		this.products = products;
+	}
+
+	
 }

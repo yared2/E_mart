@@ -7,6 +7,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
+import javax.validation.Valid;
+import javax.validation.constraints.NotEmpty;
 
 @Entity
 public class Customer {
@@ -14,20 +16,20 @@ public class Customer {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int customerId;
 
-	// @NotEmpty(message = "{validate.notEmpty}")
+	 @NotEmpty(message = "{validate.notEmpty}")
 	private String firstName;
-	// @NotEmpty(message = "{validate.notEmpty}")
+	 @NotEmpty(message = "{validate.notEmpty}")
 	private String lastName;
-	// @Valid
+	 @Valid
 	@OneToOne(cascade = CascadeType.ALL)
 	private Payment payment;
-	// @Valid
+	 @Valid
 	@OneToOne(cascade = CascadeType.ALL)
 	private ACredential acredential;
-	// @Valid
+	 @Valid
 	@OneToOne(cascade = CascadeType.ALL)
 	private ARole role;
-	// @Valid
+	 @Valid
 	@OneToOne(cascade = CascadeType.ALL)
 	private Address address;
 
@@ -76,10 +78,6 @@ public class Customer {
 	public void setPayment(Payment payment) {
 		this.payment = payment;
 	}
-
-
-
-
 
 	public ARole getRole() {
 		return role;

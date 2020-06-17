@@ -1,14 +1,18 @@
 package edu.miu.e_mart.service.definition;
 
-import edu.miu.e_mart.domain.ARole;
-//import edu.miu.e_mart.domain.CartItem;
-
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
+import edu.miu.e_mart.domain.Category;
+
+@Service
 public interface ICategoryService {
-//    public CartItem saveCartItem(CartItem cartItem);
-//    public CartItem findCartItemById(Integer id);
-//    public List<CartItem> findAllCartItem();
-//    public void updateCartItemById(Integer id);
-//    public void deleteCartItemById(Integer id);
+	public Category saveCategory(Category category);
+
+	public List<Category> findAllCategories();
+
+	public Category findCategoryById(Integer categoryId);
+
+	public Category deleteCategoryById(Integer categoryId);
 }

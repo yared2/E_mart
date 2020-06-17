@@ -3,7 +3,11 @@ package edu.miu.e_mart.domain;
 
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
+import org.hibernate.validator.constraints.CreditCardNumber;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDate;
@@ -15,21 +19,21 @@ public class Payment {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer paymentId;
 
-	// @NotEmpty
+	 @NotEmpty(message = "{validate.notEmpty}")
 	private String cardType ;
 
-	// @CreditCardNumber
-	// @Size(min=16,max=16, message = "Card should have 16 numbers!")
+	 @CreditCardNumber
+	 @Size(min=16,max=16, message = "Card should have 16 numbers!")
 	private String cartNumber;
 
-	// @NotEmpty
+	 @NotEmpty(message = "{validate.notEmpty}")
 	private String nameOnCard;
 
-	// @NotNull
+	 @NotNull
 	@DateTimeFormat(pattern = "mm/dd/yyyy")
 	private Date cardExpireDate;
-	// @NotEmpty(message = "{}")
-	private int ccv = 000;
+	 @NotNull(message = "{validate.notNull}")
+	private int cvv ;
 
 	private LocalDate paymentDate = LocalDate.now();
 
@@ -49,12 +53,12 @@ public class Payment {
 		this.cardType = cardType;
 	}
 
-	public int getCcv() {
-		return ccv;
+	public int getCvv() {
+		return cvv;
 	}
 
-	public void setCcv(int ccv) {
-		this.ccv = ccv;
+	public void setCvv(int ccv) {
+		this.cvv = ccv;
 	}
 
 	public Payment() {

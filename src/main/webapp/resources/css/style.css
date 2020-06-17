@@ -19,7 +19,10 @@ footer{
 	padding: 10px; 
 	width: 15%;
 	border-left:2px solid green;
+	border-bottom:2px solid green;
+	border-right:2px solid green;
 	margin-left:20px;
+	margin-right:5px;
 	hieght:100%; 
 }
 #content{
@@ -31,4 +34,8 @@ footer{
 }
 #footer{
 	clear: both;
+}
+
+.error{
+	color:red;
 }

@@ -3,6 +3,7 @@ package edu.miu.e_mart.domain;
 import java.util.List;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -11,6 +12,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.validation.Valid;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
@@ -18,26 +20,26 @@ import javax.validation.constraints.NotNull;
 public class Product {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="product_id")
 	private Integer productId;
-
-	// @NotEmpty(message = "{validate.notEmpty}")
+	
+	@NotEmpty(message = "{validate.notEmpty}") 
 	private String productName;
-
-	// @NotEmpty(message = "{validate.notEmpty}")
+	
+	@NotEmpty(message = "{validate.notEmpty}")
 	private String description;
-
-	// @NotNull(message = "{validate.notNull}")
+	
+	@NotNull(message = "{validate.notNull}")
 	private Double unitPrice;
-
-	// @NotEmpty(message = "{validate.notEmpty}")
+	
+	@NotEmpty(message = "{validate.notEmpty}")
 	private String productImagePath;
-
+	
 	@ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-//	@JoinColumn(name = "category_id")
+	@Valid
 	private Category category;
-
-	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-	@JoinColumn(name = "product_id")
+	
+	@OneToMany(fetch = FetchType.LAZY,cascade = CascadeType.REMOVE, mappedBy = "product")
 	private List<Review> reviews;
 
 	public Product() {
@@ -89,6 +91,14 @@ public class Product {
 
 	public void setCategory(Category category) {
 		this.category = category;
+	}
+
+	public List<Review> getReviews() {
+		return reviews;
+	}
+
+	public void setReviews(List<Review> reviews) {
+		this.reviews = reviews;
 	}
 
 }

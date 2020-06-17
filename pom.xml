@@ -9,7 +9,7 @@
 	<name>e-mart Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 	<dependencies>
-		<!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
+		<!-- https://mvnrepository.com/artifhttps://mvnrepository.com/open-source/code-analyzersact/org.springframework/spring-webmvc -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
@@ -21,6 +21,12 @@
 			<artifactId>spring-tx</artifactId>
 			<version>5.2.6.RELEASE</version>
 		</dependency>
+		
+<!-- 		 <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-devtools</artifactId>
+        <optional>true</optional>
+    </dependency> -->
 
 		<!-- https://mvnrepository.com/artifact/org.hibernate.validator/hibernate-validator -->
 		<dependency>
@@ -119,6 +125,38 @@
     <artifactId>hibernate-entitymanager</artifactId>
     <version>5.4.16.Final</version>
 </dependency>
+
+<!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-web -->
+<dependency>
+    <groupId>org.springframework.security</groupId>
+    <artifactId>spring-security-web</artifactId>
+    <version>5.3.2.RELEASE</version>
+</dependency>
+
+ 
+<!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-config -->
+<dependency>
+    <groupId>org.springframework.security</groupId>
+    <artifactId>spring-security-config</artifactId>
+    <version>5.3.2.RELEASE</version>
+</dependency>
+
+   
+<!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-core -->
+<dependency>
+    <groupId>org.springframework.security</groupId>
+    <artifactId>spring-security-core</artifactId>
+    <version>5.3.2.RELEASE</version>
+</dependency>
+
+   	
+ <!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-taglibs -->
+<dependency>
+    <groupId>org.springframework.security</groupId>
+    <artifactId>spring-security-taglibs</artifactId>
+    <version>5.3.2.RELEASE</version>
+</dependency>
+
 
 <!-- 
 		<dependency>

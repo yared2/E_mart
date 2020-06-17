@@ -4,6 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Transient;
+import javax.validation.constraints.NotEmpty;
 
 
 @Entity
@@ -11,8 +13,9 @@ public class ARole {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer roleId;
-	// @NotNull(message = "{ }")
-	private String roleType ;
+	//@NotEmpty(message = "{validate.notEmpty}")
+	
+	private String roleType = "USER";
 
 	public ARole() {
 	}
@@ -30,5 +33,9 @@ public class ARole {
 		this.roleType = roleType;
 	}
 	// getters and setters
+
+	public void setRoleId(Integer roleId) {
+		this.roleId = roleId;
+	}
 
 }
