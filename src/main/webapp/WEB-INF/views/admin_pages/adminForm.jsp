@@ -1,79 +1,43 @@
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
-
-<h2 style="text-align: center;">Admin Registration Form</h2>
+<h2 style="text-align: center;"> Admin Registration Form</h2>
 <hr>
- <form:form action="/e-mart/admin/create" method="POST" modelAttribute="admin">
+<form action="" method="POST">
   <div class="form-row">
-    <div class="form-group col-md-4">
+    <div class="form-group col-md-6">
       <label for="firstName">First Name</label>
-      <form:input type="text" class="form-control" path="firstName" />
-      <form:errors path="firstName" cssClass="error" />
+      <input type="text" class="form-control" id="firstName" >
     </div>
-    <div class="form-group col-md-4">
+    <div class="form-group col-md-6">
       <label for="lastName">Last Name</label>
-      <form:input type="text" class="form-control" path="lastName" />
-      <form:errors path="lastName" cssClass="error" />
+      <input type="text" class="form-control" id="lastName">
     </div>
   </div>
-
-  <div class="form-row">
-    <div class="form-group col-md-4">
-      <label for="acredential.userName">User Name</label>
-      <form:input type="text" class="form-control"
-        path="acredential.userName" placeholder="eg. Alex" />
-      <form:errors path="acredential.userName" cssClass="error" />
-    </div>
-    <div class="form-group col-md-4">
-      <label for="acredential.password">password</label>
-      <form:input type="text" class="form-control"
-        path="acredential.password" />
-      <form:errors path="acredential.password" cssClass="error" />
-    </div>
+  <div class="form-group">
+    <label for="credential.userName">User Name</label>
+    <input type="text" class="form-control" id="role" placeholder="eg. Alex">
   </div>
   <div class="form-row">
-    <div class="form-group col-md-4">
-      <label for="role.roleType">Role Type</label>
-      <form:select class="form-control" path="role.roleType">
-        <form:option value="0" label="Select Role" />
-        <form:options items="${roles}"  />
-      </form:select>
-      <form:errors path="role.roleType" cssClass="error" />
+    <div class="form-group col-md-6">
+      <label for="credential.password">password</label>
+      <input type="text" class="form-control" id="credential">
     </div>
-
-  </div>
-  <h3>Address</h3>
-  <div class="form-row">
-    <div class="form-group col-md-4">
+    </div>
+    <h3>Address</h3>
+    <div class="form-group col-md-2">
       <label for="Street"></label>
-      <form:input type="text" class="form-control" path="address.street"
-        placeholder="Street" />
-      <form:errors path="address.street" cssClass="error" />
+      <input type="text" class="form-control" id="address.street" placeholder="Street">
     </div>
-    <div class="form-group col-md-4">
+     <div class="form-group col-md-2">
       <label for="City"></label>
-      <form:input type="text" class="form-control" path="address.city"
-        placeholder="City" />
-      <form:errors path="address.city" cssClass="error" />
+      <input type="text" class="form-control" id="address.city" placeholder="City">
     </div>
-
-  </div>
-  <div class="form-row">
-    <div class="form-group col-md-4">
+  <div class="form-group col-md-2">
       <label for="State"></label>
-      <form:input type="text" class="form-control" path="address.state"
-        placeholder="State" />
-      <form:errors path="address.state" cssClass="error" />
+      <input type="text" class="form-control" id="address.state" placeholder="State">
     </div>
-    <div class="form-group col-md-4">
-      <label for="zipCode"></label>
-      <form:input type="text" class="form-control" path="address.zipCode"
-        placeholder="Zip Code" />
-      <form:errors path="address.zipCode" cssClass="error" />
+ <div class="form-group col-md-2">
+      <label for="ZipCode"></label>
+      <input type="text" class="form-control" id="address.zipCode" placeholder="ZipCode">
     </div>
-
-  </div>
-
-
+ 
   <button type="submit" class="btn btn-primary">Register</button>
-</form:form>
+</form>

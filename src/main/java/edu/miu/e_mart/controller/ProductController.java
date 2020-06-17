@@ -37,7 +37,6 @@ public class ProductController {
 	public String findAllProducts(@PathVariable("user") String user, Model model) {
 
 		List<Product> products = productService.findAllProducts();
-
 		model.addAttribute("products", products);
 		if (user.equals("admin"))
 			return "admin_products";
@@ -110,7 +109,6 @@ public class ProductController {
 		editedProduct.setProductImagePath(product.getProductImagePath());
 		editedProduct.setProductName(product.getProductName());
 		editedProduct.setUnitPrice(product.getUnitPrice());
-
 		productService.saveProduct(editedProduct);
 		return "redirect:/admin/products/list";
 

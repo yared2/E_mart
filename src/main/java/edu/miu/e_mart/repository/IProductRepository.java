@@ -15,4 +15,6 @@ public interface IProductRepository extends CrudRepository<Product, Integer> {
 	@Query("select p from Product p where p.category.categoryName=:categoryName")
 	public List<Product> findProductsByCategoryName(@Param("categoryName") String categoryName);
 
+	//@Query("select r from Product p join Review r where p.productId=:id and p.productId=r.productId ")
+	//public List<Review> findAllCommentsOfProduct(@Param("id")Integer productId);
 }
