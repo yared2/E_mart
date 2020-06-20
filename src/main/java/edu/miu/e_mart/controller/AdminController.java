@@ -30,8 +30,11 @@ public class AdminController {
     return "adminForm";
   }
   @RequestMapping(value = {"/admin/create"}, method = RequestMethod.POST)
-  public String saveAdmin(@Valid @ModelAttribute("admin")Admin admin,BindingResult result) {
+  public String saveAdmin(@Valid @ModelAttribute("admin")Admin admin,BindingResult result,Model model) {
     
+	  String[] roles= new String[] {"ADMIN"};
+	  
+	    model.addAttribute("roles", roles);
     if(result.hasErrors()) {
       return "adminForm";
     }

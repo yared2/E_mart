@@ -5,14 +5,12 @@
 		<ul class="navbar-nav mr-auto">
 
 			<li class="nav-item"><a class="nav-link" href="<spring:url value="/customer/products/list"/>">Products</a></li>
-			<li class="nav-item"><a class="nav-link" href="#">Customer</a></li>
-			<li class="nav-item"><a class="nav-link" href="#">Customer</a></li>
-			<li class="nav-item"><a class="nav-link" href="#">Customer</a></li>
+		
 
 		</ul>
 		<ul class="navbar-nav" style="float: right;">
-			<li class="nav-item"><a class="nav-link"
-				href="<spring:url value="#" />">My Cart</a></li>
+		<li class="nav-item"><a class="nav-link"
+        href="<spring:url value="/customer/displayProductsInCart" />">My Cart</a></li>
 			<li class="nav-item"><a class="nav-link"
 				href="<spring:url value="/logout" />">Logout</a></li>
 		</ul>

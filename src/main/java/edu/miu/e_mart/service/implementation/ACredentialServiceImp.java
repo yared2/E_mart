@@ -10,12 +10,18 @@ import edu.miu.e_mart.service.definition.IACredentialService;
 @Service
 public class ACredentialServiceImp implements IACredentialService {
 	@Autowired
-	private CustomerServiceImp customerServiceImpl;
+	private IACredentialRepository Credentialrepo;
 
 	@Override
 	public ACredential getCredntialByUserName(String name) {
-		return customerServiceImpl.findByUserName(name);
+		return Credentialrepo.findByUserName(name);
 	}
+
+//	@Override
+//	public ACredential findACredentialByUsername(String userName) {
+//		// TODO Auto-generated method stub
+//		return null
+//	}
 
 
 }

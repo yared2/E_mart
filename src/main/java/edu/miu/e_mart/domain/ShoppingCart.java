@@ -1,41 +1,45 @@
+
 package edu.miu.e_mart.domain;
 
 import javax.persistence.*;
+import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.List;
 
+
 @Entity
 public class ShoppingCart {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer cartId;
-	@OneToOne
-	private Customer customer;
-	@OneToMany(cascade = CascadeType.ALL)
-	private List<CartItem> listOfItems = new ArrayList<>();
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name="cart_id")
+    private Integer cartId;
+    @OneToOne(fetch = FetchType.EAGER)
+    private Customer customer;
+    @OneToMany(fetch = FetchType.LAZY)
+    private List<CartItem> listOfItems= new ArrayList<>();
+    public ShoppingCart() {
+    }
+    public Customer getCustomer() {
+        return customer;
+    }
 
-	public Customer getCustomer() {
-		return customer;
-	}
-	// constructor
+    public Integer getCartId() {
+        return cartId;
+    }
 
-	public ShoppingCart() {
-	}
+    public void setCartId(Integer cartId) {
+        this.cartId = cartId;
+    }
 
-	public void setCustomer(Customer customer) {
-		this.customer = customer;
-	}
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
 
-	public List<CartItem> getListOfItems() {
-		return listOfItems;
-	}
+    public List<CartItem> getListOfItems() {
+        return listOfItems;
+    }
 
-	public void setItem(CartItem item) {
-		this.listOfItems.add(item);
-	}
-
-	public Integer getCartId() {
-		return cartId;
-	}
-
+    public void addCartItemToCart(CartItem cartItem) {
+        listOfItems.add(cartItem);
+    }
 }

@@ -1,11 +1,11 @@
 
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<h2 style="text-align: center;">List Products for Admin</h2>
+<h2 style="text-align: center;">List of Admins</h2>
 <hr>
 <div style="float: right;">
 	<a class="btn btn-secondary"
-		href="<spring:url value="/admin/products"></spring:url>"> Add New Product </a>
+		href="<spring:url value="/admin/create"></spring:url>">Add New Admin</a>
 </div>
 
 <br>

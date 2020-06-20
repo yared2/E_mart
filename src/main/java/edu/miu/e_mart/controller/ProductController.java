@@ -144,10 +144,5 @@ public class ProductController {
 		return "redirect:/customer/products/list";
 	}
 
-	@RequestMapping(value = { "/admin/orders" }, method = RequestMethod.GET)
-	public String findAllOrders() {
-
-		return "order";
-	}
 
 }

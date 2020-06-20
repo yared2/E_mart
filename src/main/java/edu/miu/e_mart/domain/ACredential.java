@@ -10,6 +10,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
@@ -25,8 +26,11 @@ public class ACredential {
 	 @NotEmpty(message = "{validate.notEmpty}")
 	private String password;
 	
-	@OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-	private List<ARole> aroles = new ArrayList<>();
+	 private boolean enable
+	 
+	 
+	@OneToOne(cascade = CascadeType.ALL)
+	private ARole aroles;
 
 	public ACredential() {
 		super();
@@ -56,12 +60,15 @@ public class ACredential {
 		this.password = password;
 	}
 
-	public List<ARole> getAroles() {
+	public ARole getAroles() {
 		return aroles;
 	}
 
-	public void setAroles(List<ARole> aroles) {
+	public void setAroles(ARole aroles) {
 		this.aroles = aroles;
 	}
 
+
+
+	
 }

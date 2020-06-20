@@ -31,7 +31,7 @@ public class CustomerController {
 		if(result.hasErrors()) {
 			return "customerForm";
 		}
-		System.out.println("hiii");
+		
 		
 		
 
@@ -39,8 +39,5 @@ public class CustomerController {
 		return "redirect:/login";
 	}
 
-//	@RequestMapping(value="/customer_products" ,method = RequestMethod.GET)
-//public String anypage() {
-//	return "customer_products";
-//}
+
 }

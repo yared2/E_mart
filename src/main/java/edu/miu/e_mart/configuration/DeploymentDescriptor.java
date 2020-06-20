@@ -1,8 +1,10 @@
 package edu.miu.e_mart.configuration;
 
 import javax.servlet.Filter;
+import javax.servlet.ServletContext;
 
 import org.springframework.web.filter.CharacterEncodingFilter;
+import org.springframework.web.filter.DelegatingFilterProxy;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 
@@ -30,6 +32,12 @@ public class DeploymentDescriptor extends AbstractAnnotationConfigDispatcherServ
       CharacterEncodingFilter characterEncodingFilter = new CharacterEncodingFilter();
       characterEncodingFilter.setEncoding("UTF-8");
       return new Filter[] { characterEncodingFilter};
+    }
+    
+    
+    public void getServlet(ServletContext container) {
+    	container.addFilter("springSecurityFilterChain", new DelegatingFilterProxy("springSecurityFilterChain"))
+        .addMappingForUrlPatterns(null, false, "/*");
     }
 	
  }

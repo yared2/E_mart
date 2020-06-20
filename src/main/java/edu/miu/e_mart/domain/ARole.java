@@ -16,6 +16,9 @@ public class ARole {
 	//@NotEmpty(message = "{validate.notEmpty}")
 	
 	private String roleType = "USER";
+	
+	private String userName;
+	
 
 	public ARole() {
 	}
@@ -36,6 +39,14 @@ public class ARole {
 
 	public void setRoleId(Integer roleId) {
 		this.roleId = roleId;
+	}
+
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 
 }

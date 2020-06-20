@@ -1,3 +1,4 @@
+
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 
@@ -20,16 +21,16 @@
 
   <div class="form-row">
     <div class="form-group col-md-4">
-      <label for="credential.userName">User Name</label>
+      <label for="acredential.userName">User Name</label>
       <form:input type="text" class="form-control"
         path="acredential.userName" placeholder="eg. Alex" />
-      <form:errors path="credential.userName" cssClass="error" />
+      <form:errors path="acredential.userName" cssClass="error" />
     </div>
     <div class="form-group col-md-4">
-      <label for="credential.password">password</label>
+      <label for="acredential.password">password</label>
       <form:input type="text" class="form-control"
-        path="credential.password" />
-      <form:errors path="credential.password" cssClass="error" />
+        path="acredential.password" />
+      <form:errors path="acredential.password" cssClass="error" />
     </div>
   </div>
   <div class="form-row">

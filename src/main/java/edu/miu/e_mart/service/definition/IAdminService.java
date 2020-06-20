@@ -2,6 +2,7 @@ package edu.miu.e_mart.service.definition;
 
 import java.util.List;
 
+
 import edu.miu.e_mart.domain.Admin;
 
 public interface IAdminService {
@@ -14,7 +15,7 @@ public interface IAdminService {
 
 	public void deleteAdminById(Integer adminId);
 	
-	
+//	public Admin findAdminByName(String name);
 	
 	
 }

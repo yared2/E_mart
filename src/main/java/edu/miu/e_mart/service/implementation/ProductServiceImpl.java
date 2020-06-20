@@ -40,7 +40,7 @@ public class ProductServiceImpl implements IProductService {
 
 	@Override
 	public void deleteProductById(Integer productId) {
-<<<<<<< HEAD
+
 		productRepository.deleteById(productId);
 	}
 
@@ -55,42 +55,43 @@ public class ProductServiceImpl implements IProductService {
 		if (!user.equals("admin") || !user.equals("customer")) {
 			throw new Exception("Access Denied");
 		} else if (user.equals("admin")) {
-=======
-		 productRepository.deleteById(productId);
-	}
-
-//	@Override
-//	public List<Product> findAllProductsByCategory(String categoryName) {
-//		
-//		return productRepository.findProductsByCategoryName(categoryName);
+//=======
+//		 productRepository.deleteById(productId);
 //	}
-
-	@Override
-	public String identifyUser(String user) throws Exception {
-		if(!user.equals("admin")||!user.equals("customer")) {
-			throw new Exception("Access Denied");
-		}
-		else if(user.equals("admin")) {
->>>>>>> 27fec0bcc92e59cf2ea3c2a5100206473dc9f03f
+//
+////	@Override
+////	public List<Product> findAllProductsByCategory(String categoryName) {
+////		
+////		return productRepository.findProductsByCategoryName(categoryName);
+////	}
+//
+//	@Override
+//	public String identifyUser(String user) throws Exception {
+//		if(!user.equals("admin")||!user.equals("customer")) {
+//			throw new Exception("Access Denied");
+//		}
+//		else if(user.equals("admin")) {
+//>>>>>>> 27fec0bcc92e59cf2ea3c2a5100206473dc9f03f
 			return "admin";
 		}
 		return "customer";
 	}
 
-<<<<<<< HEAD
+
 	@Override
 	public List<Review> findAllCommentsOfProduct(Integer productId) {
 		Product product=productRepository.findById(productId).orElse(null);
 		return product.getReviews();
 	}
 
+
 }
-=======
+
 //	@Override
 //	public List<Review> findAllCommentsOfProduct(Integer productId) {
 //		
 //		return (List<Review>) productRepository.findAllCommentsOfProduct(productId);
 //	}
 
-}
->>>>>>> 27fec0bcc92e59cf2ea3c2a5100206473dc9f03f
+
+

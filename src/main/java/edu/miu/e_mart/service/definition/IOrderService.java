@@ -4,11 +4,18 @@ package edu.miu.e_mart.service.definition;
 
 import java.util.List;
 
-//public interface IOrderService {
-//    public Order saveOrder(Order order);
-//    public Order findOrderById(Integer id);
-//    public List<Order> findAllOrder();
-//    public void updateOrderById(Integer id);
-//    public void deleteOrderById(Integer id);
+import edu.miu.e_mart.domain.AnOrder;
+import edu.miu.e_mart.domain.ShoppingCart;
 
-//}
+public interface IOrderService {
+	
+public AnOrder saveOrder(AnOrder anOrder);
+public AnOrder findOrderById(Integer id);
+public List<AnOrder> findAllOrder();
+public void updateOrderById(Integer id);
+public void deleteOrderById(Integer id);
+public String stampOrderIdToShoppingCart(ShoppingCart shoppingCart);
+Double totalPriceOfTheOrder(ShoppingCart shoppingCart);
+public List<AnOrder> getAllOrders();
+
+}

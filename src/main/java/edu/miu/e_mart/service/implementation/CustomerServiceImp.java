@@ -12,6 +12,7 @@ public class CustomerServiceImp implements ICustomerService {
 	
 	@Autowired
 	private ICustomerRepository icustomerRepository;
+	
 
 	@Override
 	public void addCustomer(Customer customer) {
@@ -19,8 +20,17 @@ public class CustomerServiceImp implements ICustomerService {
 		
 	}
 
+//	@Override
+//	public Customer findCustomerByName(String userName) {
+//		
+//		return icustomerRepository.findCustomerByName(userName);
+//
+//	}
+
+
+
 	public ACredential findByUserName(String name) {
-		//icustomerRepository.f
+		
 		return null;
 	}
 

@@ -62,6 +62,7 @@ public class PersistenceJPAConfig {
         return hibernateProperties;
     }
 
+    //1 used
     @Bean
     public DataSource dataSource() {
         final DriverManagerDataSource dataSource = new DriverManagerDataSource();

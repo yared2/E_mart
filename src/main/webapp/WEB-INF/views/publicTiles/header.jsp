@@ -4,9 +4,7 @@
 	<div class="collapse navbar-collapse" id="navbarColor01">
 		<ul class="navbar-nav mr-auto">
 			
-			<li class="nav-item"><a class="nav-link" href="#">Public</a></li>
-			<li class="nav-item"><a class="nav-link" href="#">Public</a></li>
-			<li class="nav-item"><a class="nav-link" href="#">Public</a></li>
+	
 		</ul>
 		<ul class="navbar-nav" style="float: right;">
 			<li class="nav-item"><a class="nav-link"

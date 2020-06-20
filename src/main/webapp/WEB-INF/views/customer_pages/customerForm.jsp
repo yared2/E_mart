@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
@@ -122,7 +122,7 @@
     </form:form>
   </div>
 </div>
-=======
+<%-- =======
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
@@ -214,4 +214,5 @@
         </div>
     </div>
 </div>
->>>>>>> 27fec0bcc92e59cf2ea3c2a5100206473dc9f03f
+
+ --%>

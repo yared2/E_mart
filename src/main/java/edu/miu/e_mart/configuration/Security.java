@@ -45,8 +45,8 @@ public class Security extends WebSecurityConfigurerAdapter
           .jdbcAuthentication()
           .dataSource( dataSource )
           .passwordEncoder( passwordEncoder() )
-          .usersByUsernameQuery( "select username,password,enabled from acredential where userName=?" )
-          .authoritiesByUsernameQuery( "select userName, roleType from acredential where userName=?" );
+          .usersByUsernameQuery( "select userName,password,enabled from ACredential where userName=?" )
+          .authoritiesByUsernameQuery( "select userName, roleType from ACredential userName=?" );
     }
  
  
@@ -62,9 +62,9 @@ public class Security extends WebSecurityConfigurerAdapter
  			(anyRequest()) should always be at the bottom of the list.     
          */
            .authorizeRequests()
-                .antMatchers( "/login**" ).permitAll()
-                .antMatchers( "/admin" ).hasRole( "ADMIN" )
-                .antMatchers( "/employees/list" ).hasAnyRole( "ADMIN","USER" )
+                .antMatchers( "/login**" ).hasRole( "ADMIN" )
+                .antMatchers( "/admin/**" ).hasRole( "ADMIN" )
+                .antMatchers( "/customer/**" ).hasAnyRole("USER" )
                 .anyRequest().permitAll()
              .and()
             
