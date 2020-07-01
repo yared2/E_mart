@@ -26,7 +26,7 @@ public class ACredential {
 	 @NotEmpty(message = "{validate.notEmpty}")
 	private String password;
 	
-	 private boolean enable
+	 private boolean enable;
 	 
 	 
 	@OneToOne(cascade = CascadeType.ALL)
